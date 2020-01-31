@@ -1,0 +1,38 @@
+header{
+  background-color: #303236;
+  height: 150px;
+  width: 500px;
+}
+
+nav{
+  background-color: #c3cdde;
+  height: 50px;
+  width: 500px;
+}
+
+main{
+  background-color: #116a70;
+  height: 300px;
+  width: 450px;
+}
+
+aside{
+  background-color: #2b1c4d;
+  height: 300px;
+  width: 50px;
+}
+
+footer{
+  background-color: #636e6e;
+  height: 100px;
+  width: 500px;
+}
+
+#mainwrapper{
+  display: flex;
+}
+#wrapper{
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
