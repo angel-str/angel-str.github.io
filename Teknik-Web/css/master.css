@@ -1,38 +1,51 @@
 header{
   background-color: #303236;
   height: 150px;
-  width: 500px;
+  width: 100%;
 }
 
 nav{
   background-color: #c3cdde;
   height: 50px;
-  width: 500px;
+  width: 100%;
 }
 
 main{
   background-color: #116a70;
   height: 300px;
-  width: 450px;
+  width: 80%;
 }
 
 aside{
   background-color: #2b1c4d;
   height: 300px;
-  width: 50px;
+  width: 20%;
 }
 
 footer{
   background-color: #636e6e;
   height: 100px;
-  width: 500px;
+  width: 100%;
 }
 
 #mainwrapper{
   display: flex;
 }
 #wrapper{
-  width: 500px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (max-width:600px){
+
+  #mainwrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  main{
+    width: 100%;
+  }
+  aside{
+    width: 100%;
+  }
 }
