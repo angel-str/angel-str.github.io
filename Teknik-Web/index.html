@@ -16,7 +16,8 @@
         <div id="wrapper">
 
           <header>
-            header
+            Angel Strömstedt <br><br>
+            Start sida
           </header>
 
           <nav>
@@ -37,12 +38,27 @@
 
           <div id="mainwrapper">
             <main>
-              detta är startsidan
+
+              <div id="yttre">
+                <div id="innre1">
+                  Hej
+                </div>
+
+                <div id="innre2">
+                  Hello
+                </div>
+              </div>
+
+              <div id="egen">
+                Tjo
+              </div>
               <!--<img src="img/images.jpg" alt="">-->
             </main>
 
-            <aside class="">
-              aside
+            <aside>
+              aside <br>
+              <!--<img src="img/images.jpg" alt="Image">-->
+              }
             </aside>
           </div>
 
@@ -51,5 +67,18 @@
           </footer>
 
       </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+      <script type="text/javascript">
+
+        $("#innre1").click(function(){
+
+          console.log("hej");
+          $("#innre1").css("background-color","green");
+
+        });
+      </script>
+
     </body>
   </html>
