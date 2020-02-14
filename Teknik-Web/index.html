@@ -45,7 +45,7 @@
                 </div>
 
                 <div id="innre2">
-                  Hello
+                  jQuery
                 </div>
               </div>
 
@@ -58,7 +58,6 @@
             <aside>
               aside <br>
               <!--<img src="img/images.jpg" alt="Image">-->
-              }
             </aside>
           </div>
 
@@ -69,14 +68,23 @@
       </div>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
       <script type="text/javascript">
 
         $("#innre1").click(function(){
+          //console.log("hej");
 
-          console.log("hej");
           $("#innre1").css("background-color","green");
 
+          $("#innre2").toggle("slow",function(){
+
+          });
+
+        });
+        $("#innre2").click(function(){
+
+          $("#innre1").toggle("slow",function(){
+
+          })
         });
       </script>
 
