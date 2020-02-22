@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Angels Hemsida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+
+  </head>
+  <body>
+
+    <header>
+      <div class="headerWrapper">
+        <div class="headerVänster">
+
+
+        <div id="Angel">Angel</div>
+        <div id="Datorn">Datorns olika delar</div>
+
+      </div>
+
+      <div id="Källor">Källor</div>
+
+      </div>
+
+    </header>
+    <div id="wrapper">
+
+      <aside>
+
+        <div class="flip">
+
+                  <h2 id="button">></h2>
+
+        </div>
+        <div id="panel">
+          <a href="start.html">Startsidan</a>
+          <a href="cpu.html">CPU</a>
+          <a href="gpu.html">Grafikkort</a>
+          <a href="chassie.html">Chassie</a>
+          <a href="ram.html">Ramminne</a>
+          <a href="nätaggregat.html">Nätaggregat</a>
+        </div>
+
+      </aside>
+      <main>
+        <div id="yttre">
+          <div id="vänster">
+          <div id="datordel">
+
+            <h2>Datordel</h2>
+
+            </div>
+            <div id="text">
+
+              Det här är en dator
+
+            </div>
+          </div>
+          <div id="kuriosa">
+
+            <br>
+            <h2>kuriosa</h2>
+
+          </div>
+        </div>
+
+
+
+      </main>
+    </div>
+
+
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+      $("#button").click(function(){
+        //console.log("hej");
+
+        $("#panel").slideToggle("slow");
+
+      });
+    });
+  </script>
+
+</html>
