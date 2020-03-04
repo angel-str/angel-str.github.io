@@ -1,27 +1,30 @@
 body{
+  font-family: 'Ubuntu';
   background-color: black;
   animation-name: background1;
-  animation-duration: 15s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
-  animation-delay: -1s;
+  animation-delay:;
+  margin: 0;
 }
 
 @keyframes background1 {
   0% {background-color: black;}
-  60% {background-color: #3d3d3d;}
+  5% {background-color: limegreen;}
+  25%{background-color: red;}
+  40%{background-color: black;  }
+  60% {background-color: darkblue;}
   100% {background-color: black;}
 }
 header{
   background-color: #aaa9ad;
   height: 100px;
-  width: 100%;
+  width: 98%;
   text-align: left;
   font-style: italic;
   z-index: 2;
   position: fixed;
-}
-#Angel{
-display: inline-block;
+  border: solid 5px white;
 }
 
 
@@ -30,18 +33,20 @@ display: inline-block;
 }
 
 aside{
-  background-color: #ffffff;
+  background-color: #aaa9ad;
   height: 750px;
   width: 5%;
   text-align: center;
   z-index: 1;
   position: fixed;
   top: 100px;
+  border: solid 5px white;
 }
 #panel, #flip{
-  height: 20%;
+  margin-left: 0px;
+  height: 30%;
   width: 100%;
-  padding: 5px;
+  padding: 2, 0, 2, 0;
   text-align: center;
   background-color: #ffffff;
   border: solid 1px black;
@@ -52,59 +57,104 @@ aside{
 }
 
 main{
-  background-color: #C0C0C0;
-  width: 90%;
+  background-color: white;
+  width: 87%;
   height: 750px;
   position: absolute;
   left: 10%;
   top: 140px;
-  right:;
   z-index: -1;
+  border: solid 5px lightblue;
 }
 #yttre{
   height: 100%;
   width: 100%;
   display: flex;
 }
-#vänster{
+#vanster{
   height: 100%;
   width: 70%;
 }
 #datordel{
   height: 20%;
   width: 100%;
+  text-align: center;
 }
 #text{
   height: 80%;
-  width: 100%
+  width: 100%;
+  margin-left: 20px;
 }
 
 #kuriosa{
   height: 100%;
   width: 30%;
   border-radius: 20px;
-  border-left: solid 1px black;
+  border-left: solid 2px black;
+  text-align: center;
 }
 
 #headerWrapper{
-  display: flex;
-  height: 100%;
   width: 100%;
-}
-#headerVänster{
   height: 100%;
-  width: 66%
   display: flex;
 }
 #Angel{
+  width: 33%;
   height: 100%;
-  width: 50%;
+  text-align: center;
 }
-#Hemsida{
+#Datorn{
+  width: 33%;
   height: 100%;
-  width: 50%;
+  text-align: center;
+
 }
-#Källor{
-  height: 100%;
+#Source{
   width: 34%;
+  height: 100%;
+  text-align: center;
+  color: hotpink;
+}
+
+#button:hover{
+  color:lightblue;
+}
+#start{
+  width:80%;
+  text-align: center;
+  border: none;
+  background-color: white;
+}
+#start:hover{
+  width:120%;
+  height: 25px;
+  background-color: lightgreen;
+  color:white;
+  border-radius: 50%;
+}
+#stop{
+  width:80%;
+  text-align: center;
+  border: none;
+  background-color: white;
+}
+#stop:hover{
+  width:120%;
+  height: 25px;
+  background-color: lightgreen;
+  color:white;
+  border-radius: 50%;
+}
+
+a:link{
+  color: black;
+  text-decoration: none;
+}
+a:visited{
+  color: black;
+}
+a:hover{
+  color: lightblue;
+  text-decoration: underline;
 }

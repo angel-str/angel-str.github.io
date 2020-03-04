@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
 
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <title>Angels Hemsida</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,27 +12,22 @@
   <body>
 
     <header>
-      <div class="headerWrapper">
-        <div class="headerVänster">
+      <div id="headerWrapper">
 
-
-        <div id="Angel">Angel</div>
-        <div id="Datorn">Datorns olika delar</div>
-
-      </div>
-
-      <div id="Källor">Källor</div>
+      <div id="Angel"> <h1><a href="javascript:alert('Välkommen')">Angel</a></h1> </div>
+      <div id="Datorn"> <h1>Datorns Uppbyggnad</h1> </div>
+      <div id="Source"> <h1><a href="source.html">Källor</a></h1> </div>
 
       </div>
-
     </header>
+
     <div id="wrapper">
 
       <aside>
 
         <div class="flip">
 
-                  <h2 id="button">></h2>
+                  <h2 id="button">☰</h2>
 
         </div>
         <div id="panel">
@@ -41,20 +37,24 @@
           <a href="chassie.html">Chassie</a>
           <a href="ram.html">Ramminne</a>
           <a href="nätaggregat.html">Nätaggregat</a>
+          <hr>
+          <button id="start">Start</button>
+          <button id="stop">Stop</button>
         </div>
 
       </aside>
       <main>
         <div id="yttre">
-          <div id="vänster">
+          <div id="vanster">
           <div id="datordel">
 
+            <br>
             <h2>Datordel</h2>
 
             </div>
             <div id="text">
 
-              Det här är en dator
+              Det här är en datordel
 
             </div>
           </div>
@@ -79,10 +79,20 @@
 
     $(document).ready(function(){
       $("#button").click(function(){
-        //console.log("hej");
 
-        $("#panel").slideToggle("slow");
+        $("#panel").slideToggle("medium");
 
+      });
+    });
+
+    $(document).ready(function(){
+      $("#start").click(function(){
+        $("body").css("animation-iteration-count","infinite");
+        console.log("test");
+      });
+      $("#stop").click(function(){
+          console.log("stop");
+        $("body").css("animation-iteration-count","0");
       });
     });
   </script>
