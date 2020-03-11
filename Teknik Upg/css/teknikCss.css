@@ -41,13 +41,16 @@ header{
   overflow-x: hidden;
   overflow-y: hidden;
   transition: 0.6s;
+  word-spacing: 10px;
 }
 .side-nav a{
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 36px;
   text-align: center;
   margin-top: 30px;
+  word-spacing: 30px;
+  transition: 0.6s;
 }
 .side-nav a:hover{
   color: #27e3da;
@@ -57,6 +60,25 @@ header{
   right: 90%;
   position: absolute;
 }
+.openButton{
+  width: 100px;
+  height: 100px;
+  border: none;
+  background-color: #525252;
+  padding: 10px 20px;
+  position: relative;
+  left: 0;
+  top:0;
+}
+.open-slide path:hover{
+  stroke: #27e3da;
+  stroke:#27e3da;
+  transition: 0.6s;
+}
+.open-slide{
+  transition: 0.6s;
+}
+
 #text{
   margin-top: 10px;
   height: 100%;
