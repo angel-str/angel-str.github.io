@@ -21,9 +21,9 @@
           <span class="open-slide">
             <a onclick="openSlideMenu()">
               <svg width="100" height="100">
-                <path d="M25,40 75,40" stroke="#fff" stroke-width="4"/>
-                <path d="M25,50 75,50" stroke="#fff" stroke-width="4"/>
-                <path d="M25,60 75,60" stroke="#fff" stroke-width="4"/>
+                <path class="path1" d="M25,40 75,40" stroke="#fff" stroke-width="4"/>
+                <path class="path1" d="M25,50 75,50" stroke="#fff" stroke-width="4"/>
+                <path class="path1" d="M25,60 75,60" stroke="#fff" stroke-width="4"/>
               </svg>
             </a>
           </span>
@@ -40,20 +40,35 @@
           <a href="#"class="link">Nätaggregat</a>
         </div>
 
-
   </header>
     <main>
 
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
+
+
       $(document).ready(function(){
         $(".btnclose").click(function () {
           (".link").css("color", "Orange");
         })
+
+
+        $('nav').hover(function() {
+    $('.path1').attr({ stroke: "#27e3da" });
+  },
+  function() {
+$('.path1').attr({ stroke: "#ffffff" });
+}
+
+
+
+);
+
+
       })
-    </script>
-    <script type="text/javascript">
+
+
       function openSlideMenu(){
         document.getElementById('side-menu').style.width="80%";
       //  document.getElementById('link').style.color="white";
