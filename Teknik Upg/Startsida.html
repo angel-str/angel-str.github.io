@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Teknik Uppgift</title>
     <link rel="stylesheet" href="css/teknikCss.css">
-
-  </head>
+    </head>
   <body>
     <div id="invis">
       <div id="image">
@@ -33,15 +32,83 @@
 
         <div id="side-menu" class="side-nav">
           <a class="btn-close"onclick="closeSlideMenu()">&times;</a> <br>
-          <a href="#" class="link">Cpu</a>
-          <a href="#"class="link">Gpu</a>
-          <a href="#"class="link">Chassi</a>
-          <a href="#"class="link">Ram</a>
-          <a href="#"class="link">Nätaggregat</a>
+          <a href="cpu.html" class="link">Cpu</a>
+          <a href="gpu.html"class="link">Gpu</a>
+          <a href="chassi.html"class="link">Chassi</a>
+          <a href="ram.html"class="link">Ram</a>
+          <a href="nataggregat.html"class="link">Nätaggregat</a>
+          <a href="Startsida.html">Startsida</a>
         </div>
 
   </header>
     <main>
+      <div id="textMain">
+        <br>
+      Inledning <br>
+      Datorer finns överallt i dagens samhälle och det skapas bara fler och fler. För att förstå lite mer om dem och för att du ska veta lite mer vad man behöver tänka på inför köp av delar skapades denna guide!
+      Datorns alla olika delar tillför med sina egna unika funktioner. Alla är kritiska för att datorn ska fungera och de behöver även fungera i harmoni. En lista finns för de olika delarna och hur de fungerar lite grundläggande vid menyn, men här är grundläggande saker du måste tänka på vid bygg och köp av datorer.
+      Ha en ide först! <br><br>
+      Det är viktigt att du har en tydlig ide om vad du ska använda din dator till för att kunna avgöra hur bra dator du vill ha. Ju bättre dator du vill ha ju fler komplikationer skapas. Större chassi, bättre grafikkort, bra processor bättre kylningssystem, allt är viktigt och kommer med sina egna problem ju dyrare de blir.
+      Kontrollera att du har råd!<br><br>
+      Bättre datorer kostar självklart mer pengar. Men eftersom att allt i datorn ska fungera i harmoni är det oftast inte bara en komponent som påverkas om du helt plötsligt behöver bättre grafikkort. Bättre grafikkort betyder kanske större chassi, större chassi betyder andra mått för moderkort, annat moderkort kan betyda annan processor, flera starkare delar kräver starkare nätaggregat och cirkeln går runt. Kontrollera hur mycket det kommer att kosta dig i slutändan med din drömdator och bedöm sedan om det är värt det!<br><br>
+      Och slutligen, dubbelkolla att alla komponenter är sammanfogbara!
+      Olika storlekar och mjukvaror än de som behövs sätter stopp för hela datorn. Se till att alla delar är kompatibla med varandra och att de har rätt storlek. Alla komponenter måste förstå varandra för att jobba ihop. Glöm inte det!
+     </div>
+     <div id="kuriosa">
+       Lol
+     </div>
+
+<!-- IDEA: Det här kopierade jag bara -->
+<style style="text/css">
+.scroll-left {
+ height: 50px;
+ overflow: hidden;
+ position: relative;
+}
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ -moz-animation: scroll-left 20s linear infinite;
+ -webkit-animation: scroll-left 20s linear infinite;
+ animation: scroll-left 20s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   {
+ -moz-transform: translateX(100%); /* Browser bug fix */
+ -webkit-transform: translateX(100%); /* Browser bug fix */
+ transform: translateX(100%);
+ }
+ 100% {
+ -moz-transform: translateX(-100%); /* Browser bug fix */
+ -webkit-transform: translateX(-100%); /* Browser bug fix */
+ transform: translateX(-100%);
+ }
+}
+</style>
+<!-- IDEA: Kopierade det här ovanför -->
+
+<div class="scroll-left">
+<p>CSS scrolling text... </p>
+</div>
+
 
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
