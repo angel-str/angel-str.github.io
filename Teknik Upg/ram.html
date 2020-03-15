@@ -32,18 +32,85 @@
 
         <div id="side-menu" class="side-nav">
           <a class="btn-close"onclick="closeSlideMenu()">&times;</a> <br>
+
+          <a href="Startsida.html">Startsida</a>
           <a href="cpu.html" class="link">Cpu</a>
           <a href="gpu.html"class="link">Gpu</a>
           <a href="chassi.html"class="link">Chassi</a>
           <a href="ram.html"class="link">Ram</a>
           <a href="nataggregat.html"class="link">Nätaggregat</a>
-          <a href="Startsida.html">Startsida</a>
         </div>
 
   </header>
     <main>
+      <div id="textMain">
+        <br>
+        RAM-minnet, som står för ”Random Access Memory”, är ett internminne som används för att snabba på dataöverföring mellan datan och processorn. RAM-minnet lagrar data temporärt, då datan ska användas i snar framtid och inte mer, för att sedan tömmas så att ny informationen kan lagras temporärt. Denna process sker så att processorn inte ska behöva vänta på att få information från den långsammare hårddisken, vilket gör så att man kan utnyttja processorns fulla kapacitet. <br><br>
+    Det är alltså viktigt att man har ett bra RAM-minne som är i symbios med processorn. Ena kan inte användas till sitt yttersta om den andra inte kan hålla jämna steg. Så ha en bra balans mellan dessa delar och anpassa den ena efter den andra. <br><br>
+    Ju större och snabbare RAM-minne man har desto fler program kan vara igång samtidigt medans den fortfarande behåller sin prestanda. Så liksom med alla datorkomponenter ska denna anpassas efter ditt behov och vad du tänkt att göra med datorn. Speldatorer är t.ex bra att ha ett stort och snabbt RAM-minne, men andra datorer drar också nytta av detta då de inte blir lika långsamma efter ett par år. Anledningen till varför de flesta gamla datorer är ”tröga” är för att man har ett relativt fullt RAM-minne. Så ett större RAM-minne kan vara hjälpsamt även om man bara ska internetsurfa på sin dator. <br><br>
 
+      <br><br><br>
+     </div>
+     <div id="kuriosa">
+       kuriosa
+     </div>
     </main>
+
+    <footer>
+
+      <!-- IDEA: Det här kopierade jag bara -->
+      <style style="text/css">
+      .scroll-left {
+       height: 50px;
+       overflow: hidden;
+       position: relative;
+      }
+      .scroll-left p {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       margin: 0;
+       line-height: 50px;
+       text-align: center;
+       /* Starting position */
+       -moz-transform:translateX(100%);
+       -webkit-transform:translateX(100%);
+       transform:translateX(100%);
+       /* Apply animation to this element */
+       -moz-animation: scroll-left 20s linear infinite;
+       -webkit-animation: scroll-left 20s linear infinite;
+       animation: scroll-left 20s linear infinite;
+      }
+      /* Move it (define the animation) */
+      @-moz-keyframes scroll-left {
+       0%   { -moz-transform: translateX(100%); }
+       100% { -moz-transform: translateX(-100%); }
+      }
+      @-webkit-keyframes scroll-left {
+       0%   { -webkit-transform: translateX(100%); }
+       100% { -webkit-transform: translateX(-100%); }
+      }
+      @keyframes scroll-left {
+       0%   {
+       -moz-transform: translateX(100%); /* Browser bug fix */
+       -webkit-transform: translateX(100%); /* Browser bug fix */
+       transform: translateX(100%);
+       }
+       100% {
+       -moz-transform: translateX(-100%); /* Browser bug fix */
+       -webkit-transform: translateX(-100%); /* Browser bug fix */
+       transform: translateX(-100%);
+       }
+      }
+      </style>
+
+      <div class="scroll-left">
+      <p>Varning för COVID-19! Aka Coronaviruset! Glöm inte att tvätta händerna!<p>
+      </div>
+
+          <!-- IDEA: Kopierade det här ovanför -->
+
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
 
