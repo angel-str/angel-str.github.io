@@ -1,0 +1,35 @@
+/*css - cascade script sheet*/
+
+/*  */
+body{
+  height: 4000px;
+  width: 1000px;
+}
+h1{
+  color:green;
+}
+
+h1{
+  color:magenta;
+}
+#ruta1{
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+
+  float: left;
+}
+#ruta2{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+
+  float: left;
+}
+#ruta3{
+  height: 100px;
+  width: 100px;
+  background-color: green;
+
+  clear: left;
+}
