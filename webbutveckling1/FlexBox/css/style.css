@@ -63,5 +63,17 @@ footer{
   #wrapper{
     width: 100%;
   }
-  
+  #container{
+    flex-direction: column;
+  }
+  #leftBox{
+    width: 100%;
+  }
+  main{
+    width: 100%;
+  }
+  #rightBox{
+    width: 100%;
+  }
+
 }
