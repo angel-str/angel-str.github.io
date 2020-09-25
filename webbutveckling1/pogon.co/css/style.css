@@ -128,7 +128,7 @@ main{
   "box5 box6"
   "box7 box8";
 }
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:600px){
   #mainWrapper{
     flex-direction: column;
     width: 100%;
