@@ -157,7 +157,7 @@ main{
 
 
 /*              ----MOBIL----             */
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1200px){
   nav{
     flex-direction: column;
     text-align: center;
@@ -166,7 +166,7 @@ main{
     width: 100%;
   }
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1000px){
   nav{
     height: 40vh;
     flex-direction: column;
