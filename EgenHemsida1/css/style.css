@@ -154,3 +154,27 @@ main{
 ::-webkit-scrollbar-thumb {
   background: rgba(173, 132, 104,0.9);
 }
+
+
+/*              ----MOBIL----             */
+@media only screen and (max-width: 900px){
+  nav{
+    height: 40vh;
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul{
+    flex-direction: column;
+    text-align: center;
+  }
+  main{
+    margin-top: 60vh;
+  }
+  .textBox{
+    right: auto;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 80vw;
+  }
+}
