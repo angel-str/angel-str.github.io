@@ -159,6 +159,15 @@ main{
 /*              ----MOBIL----             */
 @media only screen and (max-width: 900px){
   nav{
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px){
+  nav{
     height: 40vh;
     flex-direction: column;
     text-align: center;
