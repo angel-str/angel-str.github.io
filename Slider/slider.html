@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Slider</title>
+
+    <style media="screen">
+
+      #window{
+        display: none;
+        height:200px;
+        width:200px;
+        border: 5px solid pink;
+        z-index: 2;
+        overflow: hidden;
+
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #pictures{
+        position: relative;
+        display: flex;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div id="window">
+      <div id="pictures">
+        <img src="img/img1.jpg" alt="bild1">
+        <img src="img/img2.jpg" alt="bild2">
+        <img src="img/img3.jpg" alt="bild3">
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+    $("#window").show(); //Eller skriva i js
+
+    $("#window").click(function(){
+
+      $("#pictures").animate({
+        'left' : "-=200px"
+      });
+    });
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+
+
+  <form>
+    <label for="färg">Välj färg:</label>
+    <input type="color" name="c" id="färg">
+  </form>
+
+
+  <script>
+  document.body.style.background = localStorage.getItem("color");
+
+  var theInput = document.getElementById("färg");
+  theInput.addEventListener("input",changeBackbround);
+
+
+  function changeBackbround(){
+
+    console.log(theInput.value);
+    document.body.style.background = theInput.value;
+    localStorage.setItem("color", theInput.value);
+  }
+
+  </script>
+
+
+
+
+</body>
+</html>

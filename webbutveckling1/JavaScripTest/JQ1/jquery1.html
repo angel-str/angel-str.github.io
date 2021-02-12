@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="CssJQ/master.css">
+  </head>
+  <body>
+
+    <div id="button1" style="height:200px; width:200px; background:pink;"></div>
+    <div id="button2" style="height:200px; width:200px; background:green;"></div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+    $("#button1").click(function(){
+
+      $("body").css("background-color","pink");
+      console.log("Test");
+    });
+    $("#button2").click(function(){
+
+      $("body").css("background-color","green");
+      console.log("Test");
+    });
+
+    </script>
+
+  </body>
+</html>

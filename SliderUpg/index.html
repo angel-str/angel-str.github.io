@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta charset="utf-8">
+    <title>Slider</title>
+
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com">-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body style="font-family: 'Bebas Neue', cursive;">
+
+    <header>
+
+      <div id="window">
+        <div id="pictures">
+          <img src="img/Office.jpg" alt="Kontorbild">
+          <img src="img/Office2.jpg" alt="Kontorbild">
+          <img src="img/Daniel.jpg" alt="Daniel som väntar på svar">
+          <img src="img/Office3.jpg" alt="Kontorbild">
+        </div>
+        <div id="navTextBox">
+          <a href="index.html">Home</a>
+          <a href="#">Search</a>
+          <a href="#">About us</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
+      <nav>
+        <div id="button1" class="button">
+          <p>Förra</p>
+        </div>
+        <script>$("#button1").show();</script>
+        <div id="button2" class="button">
+          <p>Nästa</p>
+        </div>
+
+        <div id="cssBtn1" class="buttonCss">
+          <a href="index.html"><p>Home</p></a>
+        </div>
+        <div id="cssBtn2" class="buttonCss">
+          <a href="#"><p>Search</p></a>
+        </div>
+        <div id="cssBtn3" class="buttonCss">
+          <a href="#"><p>About us</p></a>
+        </div>
+        <script>$(".buttonCss").hide();</script>
+        <div id="cssBtn4" class="buttonCss">
+          <a href="#"><p>Contact</p></a>
+        </div>
+        <script>$(".buttonCss").hide();</script>
+        <h1>Angel</h1>
+      </nav>
+
+    </header>
+
+
+    <main>
+      <div id="funBox">
+
+      </div>
+    </main>
+
+    <script src="main.js">
+    </script>
+  </body>
+</html>

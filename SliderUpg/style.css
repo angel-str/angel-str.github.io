@@ -1,0 +1,175 @@
+body,nav,header, main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body{
+  background-color: rgb(80, 80, 80);
+  height: 100vh;
+  width: 100vw;
+}
+
+              /*Header*/
+
+header{
+  height: 200px;
+  width: 100%;
+  border-bottom: 4px solid black;
+  background-image: url(img/City.jpg);
+}
+
+nav{
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  /*Använde generator men förstår principen*/
+  background: linear-gradient(90deg, rgba(125,34,195,1) 0%, rgba(255,110,206,0.5555264342064952) 22%, rgba(170,255,247,0.17177293280593486) 100%);
+}
+nav h1{
+  z-index: 10;
+
+  position: absolute;
+  left: 60%;
+
+  padding: 0;
+  margin: 0;
+  font-size: 12rem;
+  max-width: 20%;
+  color: rgba(255, 255, 255, 0.3);
+
+}
+#window{
+  height: 200px;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+  position: absolute;
+
+  clip-path: polygon(300px 0, 200px 100%, 0 100%, 0 0);
+}
+#pictures{
+  position: relative;
+  display: flex;
+}
+#navTextBox{
+  position: relative;
+  display: flex;
+  top: -200px;
+  height: 100%;
+  width: 100%;
+}
+#navTextBox a{
+  display: none;
+
+  height: 50px;
+  min-width: 300px;
+
+  text-align: center;
+  transform: translateY(150%);
+  z-index: 100;
+
+  color: black;
+  font-size: 2rem;
+
+  background-color: rgba(255, 255, 255, 0.7);
+
+  transition-duration: 0.3s;
+}
+#navTextBox a:hover{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.button{
+  height: 40px;
+  width: 80px;
+  z-index: 3;
+
+  position: absolute;
+  left: 300px;
+  bottom: 7px;
+
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+  border: 2px solid rgba(255,255,255,0.6);
+  border-radius: 15%;
+  transition-duration: 0.6s;
+
+  display: none;
+}
+.button:hover{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+
+  height: 45px;
+  width: 85px;
+}
+#button2{
+  left: 390px;
+}
+.buttonCss{
+  height: 40px;
+  width: 80px;
+  z-index: 3;
+
+  position: absolute;
+  left: 300px;
+  bottom: 7px;
+
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+  border: 2px solid rgba(255,255,255,0.6);
+  border-radius: 15%;
+  transition-duration: 0.6s;
+}
+
+.buttonCss:hover{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+
+  height: 45px;
+  width: 85px;
+}
+
+.buttonCss a{
+  color: inherit;
+}
+#cssBtn2{
+  left: 390px;
+}
+#cssBtn3{
+  left: 480px;
+}
+#cssBtn4{
+  left: 570px;
+}
+
+
+
+              /*Main*/
+
+main{
+  height: calc(100vh - 204px);
+  width: 100%;
+  background-color: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#funBox{
+  position: relative;
+  height: 300px;
+  width: 300px;
+
+  background-color: black;
+  border: 3px solid white;
+}

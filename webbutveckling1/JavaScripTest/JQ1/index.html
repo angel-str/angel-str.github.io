@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div id="button1" style="height:200px; width:200px; background:pink;"></div>
+    <div id="button2" style="height:200px; width:200px; background:pink;"></div>
+
+    <script>
+
+      document.getElementById("button").addEventListener("click", minFunktion)
+
+      function minFunktion(){
+        console.log("Test");
+
+        document.getElementById("button").innerHTML="Du har klickat";
+      }
+    </script>
+
+  </body>
+</html>
