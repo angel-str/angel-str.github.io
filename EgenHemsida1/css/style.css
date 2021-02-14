@@ -5,11 +5,28 @@
   scroll-behavior: smooth;
 }
 
+/*              ----BODY----             */
 body {
   height: 100vh;
   width: 100%;
   background-image: url('../img/bgrImg.jpg');
   background-size: cover;
+}
+#textBody{
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  justify-content: space-around;
+  text-align: center;
+  top: 80vh;
+
+  color: rgba(255,255,255,0.7);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  display: flex;
+  cursor: default;
 }
 
 
@@ -27,7 +44,7 @@ nav h1{
   color: rgba(72, 90, 100, 0.7);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
 
   cursor: default;
 }
@@ -74,19 +91,6 @@ header{
   font-weight: bold;
   font-size: 1.5rem;
 }
-#scrollBtn{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%,-5vh);
-
-  height: 20vh;
-  width: 20vh;
-  border-radius: 50%;
-
-  background-color: inherit;
-  font-size: 1.8rem;
-  font-weight: bold;
-}
 
 
 /*              ----MAIN----             */
@@ -119,8 +123,8 @@ main{
 
   height: 100%;
   width: auto;
+  top: 25vh;
 
-  justify-content: center;
   display: flex;
   flex-direction: column;
 
@@ -159,6 +163,11 @@ main{
 
 /*              ----MOBIL----             */
 @media only screen and (max-width: 1000px){
+
+  #textBody{
+    display: inline-block;
+    top: 70vh;
+  }
   nav{
     flex-direction: column;
     text-align: center;
@@ -167,10 +176,17 @@ main{
     width: 100%;
   }
 }
+
+
 @media only screen and (max-width: 700px){
   body{
     background-image: url("../img/bgrImgMobil.jpg");
   }
+  #textBody{
+    display: inline-block;
+    top: 75vh;
+  }
+
   nav{
     height: 40vh;
     flex-direction: column;
