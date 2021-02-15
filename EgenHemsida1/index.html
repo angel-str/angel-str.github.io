@@ -1,48 +1,82 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Angels Hemsida</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <body id="section1">
+  <title>Angels Hemsida</title>
 
-    <div id="textBody">
-      <p>Innovation</p>
-      <p>starts</p>
-      <p>with you</p>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body id="section1">
+
+
+  <!-- Slider -->
+  <div id="s2" class="slider">
+    <span>Innovation</span>
+    <span>starts</span>
+    <span>with you</span>
+  </div>
+  <div id="s1" class="slider">
+    <h1>Angel production presents</h1>
+  </div>
+
+  <style media="screen">
+    #s1{
+      font-family: 'Permanent Marker', cursive;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(".slider").show();
+  </script>
+
+
+
+  <div id="textBody">
+    <p>Innovation</p>
+    <p>starts</p>
+    <p>with you</p>
+  </div>
+
+  <div id="scroller">
+    <div id="sectionWrapper">
+      <a href="#section1">●</a>
+      <a href="#section2">●</a>
     </div>
+  </div>
 
-    <div id="scroller">
-      <div id="sectionWrapper">
-        <a href="#section1">●</a>
-        <a href="#section2">●</a>
-      </div>
+  <nav>
+    <h1>Angel</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Examples</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <header id="section2">
+      <h2>Hej</h2>
+      <h2>Text</h2>
+    </header>
+
+    <div class="textBox">
+
     </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+  integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+  crossorigin="anonymous"></script>
+  <script src="js/app.js">
 
-    <nav>
-      <h1>Angel</h1>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Examples</a></li>
-      </ul>
-    </nav>
+  </script>
 
-    <main>
-      <header id="section2">
-        <h2>Hej</h2>
-        <h2>Text</h2>
-      </header>
-
-      <div class="textBox">
-
-      </div>
-    </main>
-
-  </body>
+</body>
 </html>
