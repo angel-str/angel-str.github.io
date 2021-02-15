@@ -31,6 +31,7 @@ Borde inte ha margin top 80vh på main...
   text-transform: uppercase;
   color: rgba(255,255,255,0.7);
   letter-spacing: 0.5rem;
+  padding-top: 10vh;
 }
 #s2{
   background-color: #2d3b40;
