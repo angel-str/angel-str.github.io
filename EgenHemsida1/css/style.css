@@ -49,6 +49,7 @@ Borde inte ha margin top 80vh på main...
 #s2 span{
   overflow:hidden; /*HJÄLP*/
   transform: translateY(-100vh);
+  padding: 2rem;
   text-shadow: 5px 5px 5px #000000;
 }
 
