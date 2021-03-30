@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 /*  Nour  */
 
@@ -14,18 +15,17 @@
 header{
   position:relative;
   width: 100%;
-  height: calc(30vh - 3px);
+  height: calc(30vh - 4px);
   background:linear-gradient(90deg,#f8f8f8 0%, #e9e9e9 50%,#f8f8f8 100%);
-  border-bottom: 3px solid #850000;
+  border-bottom: 4px solid #850000;
   box-shadow: 0 0 50px 5px #000;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-nav{
-  width: 100%;
-  height: 20%;
-  background-color: inherit;
+  z-index: 1;
+
+  transition: 0.5s ease-out 0.25s;
+  clip-path: polygon(0 0, 100% 0, 100% calc(30vh - 4px), 0 calc(30vh - 4px));
 }
 #title{
   top: 20%;
@@ -49,11 +49,70 @@ nav{
   left: 10px;
 }
 #btn{
+  color: #850000;
   position: absolute;
-  bottom: 0;
+  top: 24vh;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+#btn h1{
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+nav{
+  position: absolute;
+  top: calc(30vh - 110px);
+  width: 100%;
+  height: 100px;
+  background-color: #850000;
+  transition: 0.5s ease-out 0.25s;
+}
+nav ul{
+  height: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+nav li{
+  list-style: none;
+}
+nav a{
+  color: #dedede;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
   font-size: 1.5rem;
 }
+nav a:hover{
+  color: #fff;
+  text-decoration: underline;
+}
+#btn:hover ~ nav, nav:hover{
+  transform: translateY(calc(100% + 5px));
+  transition: 0.5s ease-out 0s;
+}
+#btn:hover ~ header, nav:hover ~ header{
+  transition: 0.5s ease-out 0s;
+  clip-path: polygon(0 0, 100% 0, 100% calc(40vh - 4px), 0 calc(40vh - 4px));
+}
+nav:hover ~ main, #btn:hover ~ main{
+  transform: translateY(100px);
+  transition: 0.5s ease-out 0s;
+}
 
+
+main{
+  transition: 0.5s ease-out 0.25s;
+  box-shadow: 0 0 50px 5px #000;
+  background:linear-gradient(90deg,#f8f8f8 0%, #e9e9e9 50%,#f8f8f8 100%);
+  width: 100%;
+  height: 80vh;
+}
 
 
 /* Anton*/
