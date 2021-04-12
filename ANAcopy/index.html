@@ -1,36 +1,91 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>F1 Fanpage</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div id="btn">
-      <h1>Menu🠟</h1>
+<head>
+  <meta charset="utf-8">
+  <title>F1 Fanpage</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="btn">
+    <h1>Menu🠟</h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Donate</a></li>
+    </ul>
+  </nav>
+  <header>
+
+    <div id="title">
+      <img src="bilder/logo.png" alt="Logo F1 Fanpage">
+      <h1>Formula 1 Fanpage</h1>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Donate</a></li>
-      </ul>
-    </nav>
-    <header>
-      <!-- 🠟 -->
-      <div id="title">
-        <img src="bilder/logo.png" alt="Logo F1 Fanpage">
-        <h1>Formula 1 Fanpage</h1>
+  </header>
+  <main>
+    <div class="slider">
+
+      <div class="pictures">
+        <div class ="imagediv">
+          <p>
+            Ferrari looks good <br> Despite their horrible 2020 season
+          </p>
+          <img src="img.jpg/Charles.jpg" alt="">
+        </div>
+        <div class ="imagediv">
+          <p>
+            Mclaren improving <br> Mclaren are improving, thanks to innvovative rear diffuser design
+          </p>
+          <img src="img.jpg/lando.jpg" alt="">
+        </div>
+        <div class ="imagediv">
+          <p>
+            Redbull <br> Redbull, the team to beat heading into the season
+          </p>
+          <img src="img.jpg/max.jpg" alt="">
+        </div>
       </div>
-    </header>
-    <main>
 
-    </main>
+    </div>
+  </div>
+  <button class="btn" id="förra">Föregående</button>
+  <button class="btn" id="nästa">Nästa</button>
 
-    <footer>
+  <form id="form1">
+    <label for="Comment">Comment:</label> <br>
+    <input type="text" name="Comment">
+    <input type="submit" name="" value="Submit">
+  </form>
 
-    </footer>
+</main>
 
-  </body>
+<footer>
+  <div class="footer-content">
+    <h2>Subscribe to Our Newsletter
+    </h2>
+    <p>Text here
+    </p>
+    <div>
+      <input class="sub-box" type="text" placeholder="Enter your Email"/>
+      <button class="sub-btn">Subscribe</button>
+      <div class="footer-links">
+        <div class="logo">
+          <img src="bilder/logo.png">
+        </div>
+        <div class="social">
+          <img src="https://mk0hootsuiteblof6bud.kinstacdn.com/wp-content/uploads/2018/09/Twitter_Logo_WhiteOnImage-150x150.png"/>
+          <img src="https://mk0hootsuiteblof6bud.kinstacdn.com/wp-content/uploads/2018/09/glyph-logo_May2016-150x150.png"/>
+          <img src="https://blog-assets.hootsuite.com/wp-content/uploads/2018/09/flogo-Hex-RGB-MedGrey-58.png"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/main.js" charset="utf-8"></script>
+</body>
 </html>
