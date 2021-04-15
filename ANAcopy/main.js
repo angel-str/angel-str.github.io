@@ -9,15 +9,15 @@ $(document).ready(function(){
     });
     $('.pictures').css({
         "display": "flex"
-  
+
     });
   });
-  
+
   const fKnapp= document.querySelector('#förra');
   const nKnapp= document.querySelector('#nästa');
-  
+
   var currentPic = 1;
-  
+
   nKnapp.addEventListener('click',()=>{
       if(currentPic == 3){
           $('.pictures').animate({
@@ -30,11 +30,11 @@ $(document).ready(function(){
           })
           currentPic++;
       }
-  
-  
+
+
   });
-  
-  
+
+
   fKnapp.addEventListener('click',()=>{
     if(currentPic == 1){
         $('.pictures').animate({
