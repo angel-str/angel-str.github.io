@@ -28,6 +28,7 @@ canvas{
   transform: translate(-50%,-50%);
   width: 300px;
   height: 300px;
+  box-shadow: 0 0 20px 5px #000;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
