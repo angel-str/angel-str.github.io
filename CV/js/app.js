@@ -7,7 +7,7 @@ var ctx = canvas.getContext("2d");
 var w=window.innerWidth;
 var h=window.innerHeight;
 
-const updFre = 10;
+const updFre = 20;
 
 const scaler = 1.7;
 
@@ -24,7 +24,7 @@ const radie = 2 * scaler;
 const ballColor = "rgb(255,255,255)";
 const shadowColor = "cyan";
 
-const v = 0.4 * (Math.PI/180);
+const v = 0.8 * (Math.PI/180);
 const eyeDistance = 50;
 
 /*--------------UPDATE/ROTATE--------------*/
