@@ -1,24 +1,23 @@
-console.log("Connected");
-
-/*--------------VARIABLER--------------*/
+/*--------------VARIABLES--------------*/
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-var w=window.innerWidth;
-var h=window.innerHeight;
+const w = window.innerWidth;
+const h = window.innerHeight;
 
 const updFre = 20;
 
 const scaler = 1.7;
 
-var kub3D = [];
-const right = 100;
-const down = 100;
-const away = 100;
+var cube3D = [];
 const depth = 6;
 const height = 6;
 const width = 6;
 const spacer = 10 * scaler;
+
+const right = calcRight();
+const down = calcDown();
+const away = down;
 
 const radie = 2 * scaler;
 const ballColor = "rgb(255,255,255)";
@@ -34,11 +33,22 @@ function update(){
   paintAllBalls();
 }
 
-/*--------------KUB--------------*/
+/*--------------CALC POSITION--------------*/
+function calcRight(){
+  let wCube = width * spacer;
+  return (document.getElementById("canvas").width - wCube)/2;
+
+}
+function calcDown(){
+  let hCube = height * spacer;
+  return (document.getElementById("canvas").height - hCube)/2;
+}
+
+/*--------------CUBE--------------*/
 for(var z = 0; z < depth; z++){
   for (var y = 0; y < height; y++) {
     for (var x = 0; x < width; x++) {
-      kub3D.push({
+      cube3D.push({
         x:x*spacer + right,
         y:y*spacer + down,
         z:z*spacer + away
@@ -47,13 +57,13 @@ for(var z = 0; z < depth; z++){
   }
 }
 
-var xPlane = (getHighX() - getLowX())/2 + getLowX();
-var yPlane = (getHighY() - getLowY())/2 + getLowY();
-var zPlane = (getHighZ() - getLowZ())/2 + getLowZ();
+var xPlane = (getHighX() + getLowX())/2;
+var yPlane = (getHighY() + getLowY())/2;
+var zPlane = (getHighZ() + getLowZ())/2;
 
 function getHighX(){
-  let max = kub3D[0].x;
-  kub3D.forEach((ball, kub3D) => {
+  let max = cube3D[0].x;
+  cube3D.forEach((ball, cube3D) => {
     if(ball.x>max){
       max = ball.x;
     }
@@ -61,8 +71,8 @@ function getHighX(){
   return max;
 }
 function getLowX(){
-  let min = kub3D[0].x;
-  kub3D.forEach((ball, kub3D) => {
+  let min = cube3D[0].x;
+  cube3D.forEach((ball, cube3D) => {
     if(ball.x<min){
       min = ball.x;
     }
@@ -70,8 +80,8 @@ function getLowX(){
   return min;
 }
 function getHighY(){
-  let max = kub3D[0].y;
-  kub3D.forEach((ball, kub3D) => {
+  let max = cube3D[0].y;
+  cube3D.forEach((ball, cube3D) => {
     if(ball.y>max){
       max = ball.y;
     }
@@ -79,8 +89,8 @@ function getHighY(){
   return max;
 }
 function getLowY(){
-  let min = kub3D[0].y;
-  kub3D.forEach((ball, kub3D) => {
+  let min = cube3D[0].y;
+  cube3D.forEach((ball, cube3D) => {
     if(ball.y<min){
       min = ball.y;
     }
@@ -88,8 +98,8 @@ function getLowY(){
   return min;
 }
 function getHighZ(){
-  let max = kub3D[0].z;
-  kub3D.forEach((ball, kub3D) => {
+  let max = cube3D[0].z;
+  cube3D.forEach((ball, cube3D) => {
     if(ball.z>max){
       max = ball.z;
     }
@@ -97,8 +107,8 @@ function getHighZ(){
   return max;
 }
 function getLowZ(){
-  let min = kub3D[0].z;
-  kub3D.forEach((ball, kub3D) => {
+  let min = cube3D[0].z;
+  cube3D.forEach((ball, cube3D) => {
     if(ball.z<min){
       min = ball.z;
     }
@@ -109,7 +119,7 @@ function getLowZ(){
 
 
 function rotateXY(){
-  kub3D.forEach((ball, kub3D) => {
+  cube3D.forEach((ball, cube3D) => {
     let x = ball.x - xPlane;
     let y = ball.y - yPlane;
 
@@ -118,7 +128,7 @@ function rotateXY(){
   });
 }
 function rotateYZ(){
-  kub3D.forEach((ball, kub3D) => {
+  cube3D.forEach((ball, cube3D) => {
     let y = ball.y - yPlane;
     let z = ball.z - zPlane;
 
@@ -131,7 +141,7 @@ function rotateYZ(){
 
 function from3Dto2d(coord3d){
 
-  let kub2D = [];
+  let cube2D = [];
 
   coord3d.forEach((ball, coord3d) => {
 
@@ -139,13 +149,13 @@ function from3Dto2d(coord3d){
     let y = ball.y - yPlane;
     let z = ball.z;
 
-    kub2D.push({
+    cube2D.push({
       x: xPlane + x/(eyeDistance + z) * z,
       y: yPlane + y/(eyeDistance + z) * z
     });
   });
 
-  return kub2D;
+  return cube2D;
 }
 
 
@@ -154,7 +164,7 @@ function from3Dto2d(coord3d){
 
 function paintAllBalls(){
   ctx.clearRect(0,0,w,h);
-  from3Dto2d(kub3D).forEach((ball, kub2D) => {
+  from3Dto2d(cube3D).forEach((ball, cube2D) => {
     paintBall(ball.x,ball.y);
   });
 }
