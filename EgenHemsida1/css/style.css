@@ -247,6 +247,11 @@ main{
     top: 75vh;
   }
 
+  #s2{
+    font-size: 1.5rem;
+    letter-spacing: calc(inherit - 0.5rem);
+  }
+
   nav{
     height: 40vh;
     flex-direction: column;
