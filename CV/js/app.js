@@ -37,7 +37,6 @@ function update(){
 function calcRight(){
   let wCube = width * spacer;
   return (document.getElementById("canvas").width - wCube)/2;
-
 }
 function calcDown(){
   let hCube = height * spacer;
