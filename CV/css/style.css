@@ -63,35 +63,45 @@ header a{
 }
 header a:hover{
   color: white;
+  font-weight: bold;
 }
 header li::before{
   content: "";
   position: absolute;
   background: #d757f6;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  width: 65%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
 
-  transform: translateX(-50%) perspective(2em) rotateX(40deg) scale(1, 0.35);
-  filter: blur(1.6em);
+  transform: translateX(-50%) perspective(2em) rotateX(110deg) scale(1, 0.4);
+  filter: blur(2.5em);
+  /*
+  content: "";
+  position: absolute;
+  background: #d757f6;
+  top: 40%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+
+  transform: translateX(-50%) perspective(2em) rotateX(110deg) scale(1, 0.4);
+  filter: blur(2.5em);
+  */
 }
-header a:hover ~ header li::before{
-  display: none;
-}
+
 header svg{
-  position: fixed;
-  top: 7.5%;
+  position: absolute;
   right: 2%;
+  top: 50%;
   transform: translateY(-50%);
   color: rgb(216, 216, 216);
   cursor: pointer;
-  transition: 0.3s;
   z-index: 10;
 }
+
 header svg:hover{
   color: white;
-
 }
 
 .wrapper{
@@ -170,7 +180,7 @@ header svg:hover{
   z-index: 1;
 }
 #Light{
-  animation: svgLight 4s 1;                                        /*Funkar inte*/
+  animation: svgLight 4s 1;
 }
 
 
@@ -223,16 +233,17 @@ header svg:hover{
     0 0 0.1em #d757f6; color: rgba(255, 255, 255, 1);}
 }
 @keyframes svgLight{
-  0%{display: svg;}
-  30%{display: svg;}
-  33%{display: none;}
-  35%{display: svg;}
-  39%{display: svg;}
-  40%{display: none;}
-  43%{display: svg;}
-  60%{display: svg;}/*  <-- Förändring  */
-  70%{display: none;}
-  74%{display: svg;}
+  0%{opacity: 100%;}
+  30%{opacity: 100%;}
+  33%{opacity: 0%;}
+  35%{opacity: 100%;}
+  39%{opacity: 100%;}
+  40%{opacity: 0%;}
+  43%{opacity: 100%;}
+  60%{opacity: 100%;}
+  70%{opacity: 0%;}
+  73%{opacity: 0%;}
+  74%{opacity: 100%;}
 }
 @keyframes shadowLight{
   0%{background: linear-gradient(rgba(0,0,0,0) 30%, rgba(255,255,255,0.7) 130%),
