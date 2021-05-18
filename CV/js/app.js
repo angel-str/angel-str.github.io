@@ -1,24 +1,28 @@
 console.log("Connected");
-var jsHide_var = [];
-jsHide_var = document.getElementsByClassName("jsHide");
-var jsShow_var = [];
-jsShow_var = document.getElementsByClassName("jsShow");
-
-console.log(jsHide_var);
-
+var jsHide_var = document.getElementsByClassName("jsHide");
 jsHide_var[0].style.display = "none";
 
-function onScroll(){
-  var y = window.scrollY;
-  document.getElementById("listSvg");
-}
-
-window.addEventListener("scroll", onScroll);
+var jsShow_var = document.getElementsByClassName("jsShow");
+jsShow_var[0].style.display = "block";
 
 //KOLLA MED DANILE OM UPPE
 
 
-/*--------------KUB--------------*/
+var hamBtn = document.getElementById("listSvg");
+var trackerNav = true;
+hamBtn.addEventListener("click",navSlide);
+function navSlide(){
+  if(trackerNav){
+    document.getElementsByTagName("nav")[0].style.transform = "translateX(0%)";
+    trackerNav = false;
+  }else{
+    document.getElementsByTagName("nav")[0].style.transform = "translateX(100%)";
+    trackerNav = true;
+  }
+}
+
+
+/*KUB*/
 
 
 /*--------------VARIABLES--------------*/
