@@ -24,10 +24,6 @@ p{
 body{
   width: 100%;
   height: auto;
-  background-image: url("..\\img\\CityBgImg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
 }
 
 
@@ -40,7 +36,7 @@ nav{
   transform: translateX(100%);
   background: #000;
   transition: 0.5s ease-in-out;
-  z-index: 5;
+  z-index: 9;
   overflow: hidden;
 }
 
@@ -101,7 +97,7 @@ header li::before{
   height: 60%;
 
   transform: translate(-50%,-20%) perspective(2em) rotateX(60deg) scale(1, 0.4);
-  filter: blur(1em);
+  filter: blur(2em);
 }
 
 header svg{
@@ -335,14 +331,12 @@ header svg:hover{
   text-align: center;
 }
 #section2 > h2{
-  padding-top: 20px;
-  padding-bottom: 20px;
   color: #7e2199;
   font-size: 3rem;
 }
 #section2 > p{
-  padding-right: 15vw;
-  padding-left: 15vh;
+  padding-right: 20vw;
+  padding-left: 20vw;
   background: rgba(0, 0, 0, 0.7);
 }
 #bgS2{
@@ -353,10 +347,20 @@ header svg:hover{
   z-index: 2;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 26% 90%, 53% 95%, 83% 90%, 95% 53%, 87% 16%, 66% 22%, 46% 13%, 25% 18%, 14% 14%, 7% 56%, 12% 84%, 22% 92%, 0% 100%);
 }
+#section2 img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  overflow: hidden;
+}
 #window{
   width: 500px;
-  height: 400px;
-  padding-top: 10vh;
+  height: 300px;
+  padding-top: 3vh;
   margin-left: auto;
   margin-right: auto;
   display: flex;
