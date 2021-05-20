@@ -35,7 +35,6 @@ nav{
   right: 0;
   transform: translateX(100%);
   background: #000;
-  transition: 0.5s ease-in-out;
   z-index: 9;
   overflow: hidden;
 }
@@ -347,7 +346,7 @@ header svg:hover{
   z-index: 2;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 26% 90%, 53% 95%, 83% 90%, 95% 53%, 87% 16%, 66% 22%, 46% 13%, 25% 18%, 14% 14%, 7% 56%, 12% 84%, 22% 92%, 0% 100%);
 }
-#section2 img{
+#section2 > img{
   position: absolute;
   top: 0;
   left: 0;

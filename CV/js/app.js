@@ -10,6 +10,7 @@ jsShow_var[0].style.display = "block";
 
 var hamBtn = document.getElementById("listSvg");
 var trackerNav = true;
+hamBtn.style.transition = "0.5s ease-in-out";
 hamBtn.addEventListener("click",navSlide);
 function navSlide(){
   if(trackerNav){
@@ -74,11 +75,13 @@ function calcDown(){
 for(var z = 0; z < depth; z++){
   for (var y = 0; y < height; y++) {
     for (var x = 0; x < width; x++) {
-      cube3D.push({
-        x:x*spacer + right,
-        y:y*spacer + down,
-        z:z*spacer + away
-      });
+      if (z == 0 || z == depth-1 || y == 0 || y == height-1 || x == 0 || x == width-1) {
+        cube3D.push({
+          x:x*spacer + right,
+          y:y*spacer + down,
+          z:z*spacer + away
+        });
+      }
     }
   }
 }
