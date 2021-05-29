@@ -1,6 +1,7 @@
 console.log("Connected");
 var jsHide_var = document.getElementsByClassName("jsHide");
 jsHide_var[0].style.display = "none";
+jsHide_var[1].style.display = "none";
 
 var jsShow_var = document.getElementsByClassName("jsShow");
 jsShow_var[0].style.display = "block";
@@ -9,6 +10,9 @@ jsShow_var[2].style.display = "block";
 jsShow_var[3].style.display = "block";
 jsShow_var[4].style.display = "inline";
 jsShow_var[5].style.display = "inline";
+
+document.getElementById("window").style.overflow = "hidden";
+document.getElementById("slider").style.flexDirection = "row";
 
 //KOLLA MED DANILE OM UPPE -----------------------------------------------------
 
