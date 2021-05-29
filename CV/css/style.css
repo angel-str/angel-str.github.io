@@ -10,13 +10,17 @@ h1{
 }
 h2{
   font-family: 'Lobster', cursive;
+  padding: 20px;
 }
 a{
   color: #40ded3;
 }
 p{
   color: rgba(185, 185, 185, 1);
-  padding: 2rem;
+  padding: 2px;
+}
+.jsShow{
+  display: none;
 }
 
 
@@ -37,6 +41,7 @@ nav{
   background: rgba(0, 0, 0, 0.7);;
   z-index: 9;
   overflow: hidden;
+  overflow-y: scroll;
   color: rgb(216, 216, 216);
   text-align: center;
 }
@@ -50,11 +55,16 @@ nav h2:last-of-type{
   padding: 2rem;
   border-top: 3px solid rgb(216, 216, 216);
 }
+nav a{
+  text-decoration: none;
+  padding: 20px;
+}
 nav ul{
   border-bottom: 3px solid rgb(216, 216, 216);
 }
 nav li{
   padding: 1rem;
+  text-decoration: underline;
 }
 .navBtn{
   margin-top: 1rem;
@@ -64,6 +74,9 @@ nav li{
 }
 .navBtn:hover{
   color: #40ded3;
+}
+nav form{
+  width: 100%;
 }
 
 /*------------------------Section 1 (above the fold)------------------------*/
@@ -81,6 +94,8 @@ header{
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  box-shadow: 0 0 20px 5px #000;
 }
 header h2{
   font-size: 3rem;
@@ -123,7 +138,7 @@ header li::before{
   height: 60%;
 
   transform: translate(-50%,-20%) perspective(2em) rotateX(60deg) scale(1, 0.4);
-  filter: blur(1.15em);
+  filter: blur(1em);
 }
 
 header svg{
@@ -134,7 +149,6 @@ header svg{
   cursor: pointer;
   margin-right: 20px;
   z-index: 10;
-  display: none;
 }
 
 header svg:hover{
@@ -361,6 +375,7 @@ header svg:hover{
   font-size: 3rem;
 }
 #section2 > p{
+  padding: 2rem;
   padding-right: 20vw;
   padding-left: 20vw;
   background: rgba(0, 0, 0, 0.7);
@@ -385,8 +400,8 @@ header svg:hover{
 }
 #window{
   width: 500px;
-  height: 300px;
-  padding-top: 3vh;
+  height: 320px;
+  padding-top: 20px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -441,13 +456,15 @@ canvas{
   background-color: rgba(255, 255, 255, 0.5);
   color: black;
 }
+.flip-card-front img {
+
+}
 
 /* Style the back side */
 .flip-card-back {
   background-color: #2d333d;
   color: white;
   transform: rotateY(180deg);
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -455,7 +472,11 @@ canvas{
 /*Koden över är inte min*/
 
 footer{
-  background: inherit;
+  text-align: center;
+  color: white;
+  background: #2d333d;
+  padding: 10px;
+  border-top: 3px solid gray;
 }
 
 
@@ -465,4 +486,74 @@ footer{
   width: 100%;
   height: auto;
   background: #1c2026;
+  display: flex;
+  justify-content: flex-end;
+}
+#section3 form{
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#section3 form input{
+  display: none;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #03ad80;
+  cursor: pointer;
+}
+#section3 section{
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+#section3 section h2{
+  color: #03ad80;
+  font-size: 3rem;
+  padding: 5%;
+  border-bottom: 2px solid rgba(185, 185, 185, 0.9);
+}
+#section3 section p{
+  transition: 0.4s ease;
+  padding-top: 5%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#section3 section p span:first-child{
+  color: #adff8a;
+}
+#section3 section p a{
+  color: #ffda05;
+  text-decoration: underline;
+}
+.paragrafJS{
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#window4img{
+  position: relative;
+  height: 600px;
+  max-width: 500px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 7px #000;
+}
+#AndoridJones{
+  transform: translateX(0px);
+  transition: 0.5s ease;
+}
+
+
+/*------------------------Scrollbar------------------------*/
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: #0009;
+}
+::-webkit-scrollbar-track{
+  background: linear-gradient(#d757f6 0%, #40ded3 50%, #1c2026 100%);
 }

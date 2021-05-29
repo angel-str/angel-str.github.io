@@ -4,10 +4,16 @@ jsHide_var[0].style.display = "none";
 
 var jsShow_var = document.getElementsByClassName("jsShow");
 jsShow_var[0].style.display = "block";
+jsShow_var[1].style.display = "block";
+jsShow_var[2].style.display = "block";
+jsShow_var[3].style.display = "block";
+jsShow_var[4].style.display = "inline";
+jsShow_var[5].style.display = "inline";
 
-//KOLLA MED DANILE OM UPPE
+//KOLLA MED DANILE OM UPPE -----------------------------------------------------
 
 
+/*NAV*/
 var hamBtn = document.getElementById("listSvg");
 var nav = document.getElementsByTagName("nav")[0];
 var trackerNav = true;
@@ -23,6 +29,8 @@ function navSlide(){
   }
 }
 
+
+/*Slider*/
 var counterSlider = 1;
 var currentValueNav = 0;
 const amountOfSlides = 2;
@@ -51,6 +59,39 @@ function rightNav(){
   }
 }
 
+/*Slider 2*/
+var radioBtns = document.getElementsByClassName("radioBtn");
+var parOrder = document.getElementsByClassName("pOrder")
+radioBtns[0].addEventListener("click", slide0);
+radioBtns[1].addEventListener("click", slide1);
+radioBtns[2].addEventListener("click", slide2);
+parOrder[0].style.opacity = "100%";
+parOrder[1].style.opacity = "0%";
+parOrder[2].style.opacity = "0%";
+parOrder[0].classList.add("paragrafJS");
+parOrder[1].classList.add("paragrafJS");
+parOrder[2].classList.add("paragrafJS");
+
+
+function slide0(){
+  document.getElementById("AndoridJones").style.transform = "translateX(0px)";
+
+  parOrder[0].style.opacity = "100%";
+  parOrder[1].style.opacity = "0%";
+  parOrder[2].style.opacity = "0%";
+}
+function slide1(){
+  document.getElementById("AndoridJones").style.transform = "translateX(-500px)";
+  parOrder[0].style.opacity = "0%";
+  parOrder[1].style.opacity = "100%";
+  parOrder[2].style.opacity = "0%";
+}
+function slide2(){
+  document.getElementById("AndoridJones").style.transform = "translateX(-1000px)";
+  parOrder[0].style.opacity = "0%";
+  parOrder[1].style.opacity = "0%";
+  parOrder[2].style.opacity = "100%";
+}
 
 /*KUB*/
 
@@ -62,9 +103,9 @@ var ctx = canvas.getContext("2d");
 const w = window.innerWidth;
 const h = window.innerHeight;
 
-const updFre = 20;
+const updFre = 10;
 
-const scaler = 1.7;
+const scaler = 1.8;
 
 var cube3D = [];
 const depth = 6;
@@ -80,7 +121,7 @@ const radie = 2 * scaler;
 const ballColor = "rgb(255,255,255)";
 const shadowColor = "cyan";
 
-const v = 0.8 * (Math.PI/180);
+const v = 0.5 * (Math.PI/180);
 const eyeDistance = 50;
 
 /*--------------UPDATE/ROTATE--------------*/
