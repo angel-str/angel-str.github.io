@@ -9,16 +9,45 @@ jsShow_var[0].style.display = "block";
 
 
 var hamBtn = document.getElementById("listSvg");
+var nav = document.getElementsByTagName("nav")[0];
 var trackerNav = true;
-hamBtn.style.transition = "0.5s ease-in-out";
+nav.style.transition = "0.5s ease-in-out";
 hamBtn.addEventListener("click",navSlide);
 function navSlide(){
   if(trackerNav){
-    document.getElementsByTagName("nav")[0].style.transform = "translateX(0%)";
+    nav.style.transform = "translateX(0%)";
     trackerNav = false;
   }else{
-    document.getElementsByTagName("nav")[0].style.transform = "translateX(100%)";
+    nav.style.transform = "translateX(100%)";
     trackerNav = true;
+  }
+}
+
+var counterSlider = 1;
+var currentValueNav = 0;
+const amountOfSlides = 2;
+document.getElementById("leftBtn").addEventListener("click", leftNav);
+document.getElementById("rightBtn").addEventListener("click", rightNav);
+var slider = document.getElementById("slider");
+
+function leftNav(){
+  currentValueNav += 500;
+  slider.style.transform = "translateX(" + currentValueNav +"px)";
+  counterSlider--;
+  if(counterSlider == 0){
+    currentValueNav -= 500 * amountOfSlides;
+  slider.style.transform = "translateX(" + currentValueNav +"px)";
+  counterSlider = amountOfSlides;
+  }
+}
+function rightNav(){
+  currentValueNav -= 500;
+  slider.style.transform = "translateX(" + currentValueNav +"px)";
+  counterSlider++;
+  if(counterSlider == amountOfSlides + 1){
+    currentValueNav = 0;
+  slider.style.transform = "translateX(" + currentValueNav +"px)";
+  counterSlider = 1;
   }
 }
 

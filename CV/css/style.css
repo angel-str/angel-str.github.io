@@ -34,15 +34,42 @@ nav{
   width: 500px;
   right: 0;
   transform: translateX(100%);
-  background: #000;
+  background: rgba(0, 0, 0, 0.7);;
   z-index: 9;
   overflow: hidden;
+  color: rgb(216, 216, 216);
+  text-align: center;
+}
+nav h2:first-of-type{
+  font-size: 2rem;
+  padding: 2rem;
+  border-bottom: 3px solid rgb(216, 216, 216);
+}
+nav h2:last-of-type{
+  font-size: 2rem;
+  padding: 2rem;
+  border-top: 3px solid rgb(216, 216, 216);
+}
+nav ul{
+  border-bottom: 3px solid rgb(216, 216, 216);
+}
+nav li{
+  padding: 1rem;
+}
+.navBtn{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 1s;
+}
+.navBtn:hover{
+  color: #40ded3;
 }
 
 /*------------------------Section 1 (above the fold)------------------------*/
 #section1{
   width: 100%;
-  height: 100vh;
+  height: auto;
   background: linear-gradient(#0a1f3d 0%, #1c2026 100%);
 }
 
@@ -92,18 +119,17 @@ header li::before{
   background: #d757f6;
   top: 50%;
   left: 50%;
-  width: 70%;
+  width: 60%;
   height: 60%;
 
   transform: translate(-50%,-20%) perspective(2em) rotateX(60deg) scale(1, 0.4);
-  filter: blur(2em);
+  filter: blur(1.15em);
 }
 
 header svg{
   position: fixed;
   right: 0%;
-  top: calc((15vh - 2px) / 2);
-  transform: translateY(-50%);
+  top: 2rem;
   color: rgb(216, 216, 216);
   cursor: pointer;
   margin-right: 20px;
@@ -324,13 +350,14 @@ header svg:hover{
 #section2{
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto;
   background: transparent;
 
   text-align: center;
+  overflow: hidden;
 }
 #section2 > h2{
-  color: #7e2199;
+  color: #40ded3;
   font-size: 3rem;
 }
 #section2 > p{
@@ -343,7 +370,7 @@ header svg:hover{
   height: 100%;
   width: 100%;
   background: #1c2026;
-  z-index: 2;
+  z-index: 0;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 26% 90%, 53% 95%, 83% 90%, 95% 53%, 87% 16%, 66% 22%, 46% 13%, 25% 18%, 14% 14%, 7% 56%, 12% 84%, 22% 92%, 0% 100%);
 }
 #section2 > img{
@@ -362,12 +389,17 @@ header svg:hover{
   padding-top: 3vh;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
   overflow: hidden;
+  z-index: 5;
+}
+#slider{
+  display: flex;
+  z-index: 5;
 }
 
 canvas{
   background-color: transparent;
+  z-index: 5;
 }
 
 /*KODEN UNDER ÄR INTE MIN*/
@@ -424,4 +456,13 @@ canvas{
 
 footer{
   background: inherit;
+}
+
+
+/*------------------------Section 3------------------------*/
+#section3{
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #1c2026;
 }
