@@ -569,7 +569,19 @@ footer{
   #s1Right{
     width: 100%;
   }
+  #s1Right svg{
+    display: none;
+  }
   #window4img{
+    display: none;
+  }
+  header{
+    height: auto;
+  }
+}
+
+@media only screen and (max-height : 445px){
+  #s1Right{
     display: none;
   }
 }
@@ -587,9 +599,6 @@ footer{
   }
   header li::before{
     display: none;
-  }
-  header{
-    height: auto;
   }
   #s1Right{
     display: none;
