@@ -561,6 +561,14 @@ footer{
   background: linear-gradient(#d757f6 0%, #40ded3 50%, #1c2026 100%);
 }
 
+@media only screen and (max-height : 445px){
+  #s1Right{
+    display: none;
+  }
+  #s1Left{
+    width: 100%;
+  }
+}
 @media only screen and (max-width : 1100px){
   .wrapper{
     flex-direction: column;
@@ -579,12 +587,6 @@ footer{
   }
   header{
     height: auto;
-  }
-}
-
-@media only screen and (max-height : 445px){
-  #s1Right{
-    display: none;
   }
 }
 @media only screen and (max-width : 960px){
