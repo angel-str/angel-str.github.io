@@ -138,7 +138,9 @@ header li::before{
   width: 60%;
   height: 60%;
 
-  transform: translate(-50%,-20%) perspective(2em) rotateX(60deg) scale(1, 0.4);
+  transform: translate(-50%,-20%)
+  perspective(2em) rotateX(60deg)
+  scale(1, 0.4);
   filter: blur(1em);
 }
 
@@ -218,7 +220,7 @@ header svg:hover{
 
   background: linear-gradient(rgba(0,0,0,0) 30%, rgba(255,255,255,0.7) 130%),
   linear-gradient(rgba(0,0,0,0) 50%, #d757f6 110%);
-  -webkit-background-clip: text;                                    /*Avgränsning, anpassat för chrom*/
+  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -616,7 +618,7 @@ footer{
     max-width: 100%;
   }
   .flip-card-front canvas{
-    max-width: 100%;
+    max-width: 100vw;
   }
   .flip-card-front{
     max-width: 100vw;
