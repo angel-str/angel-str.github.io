@@ -1,9 +1,9 @@
-console.log("Connected");
+console.log("Connected");//Koden nedan döljer element som inte skall visas när javascript är av
 var jsHide_var = document.getElementsByClassName("jsHide");
 jsHide_var[0].style.display = "none";
 jsHide_var[1].style.display = "none";
 
-var jsShow_var = document.getElementsByClassName("jsShow");
+var jsShow_var = document.getElementsByClassName("jsShow"); //Koden ändrar vad som brukade vara display: none till display: block så att elementen syns.
 jsShow_var[0].style.display = "block";
 jsShow_var[1].style.display = "block";
 jsShow_var[2].style.display = "block";
@@ -24,11 +24,12 @@ var trackerNav = true;
 nav.style.transition = "0.5s ease-in-out";
 hamBtn.addEventListener("click",navSlide);
 function navSlide(){
-  if(trackerNav){
-    nav.style.transform = "translateX(0%)";
+
+  if(trackerNav){ //If satsen alternerar mellan att stänga och öppna naven
+    nav.style.transform = "translateX(0%)"; //ÖPPNAR
     trackerNav = false;
   }else{
-    nav.style.transform = "translateX(100%)";
+    nav.style.transform = "translateX(100%)";  //STÄNGER
     trackerNav = true;
   }
 }
@@ -42,7 +43,7 @@ document.getElementById("leftBtn").addEventListener("click", leftNav);
 document.getElementById("rightBtn").addEventListener("click", rightNav);
 var slider = document.getElementById("slider");
 
-function leftNav(){
+function leftNav(){         //Förskuter bilden innutio slidern ett visst antal pixlar beroende på vilken slide det är. Ifsatsen har koll på så att den resettar vid 0 och "antalSlides"
   currentValueNav += 500;
   slider.style.transform = "translateX(" + currentValueNav +"px)";
   counterSlider--;
@@ -146,7 +147,7 @@ function calcDown(){
 }
 
 /*--------------CUBE--------------*/
-for(var z = 0; z < depth; z++){
+for(var z = 0; z < depth; z++){           //Skapar en lista med kubens koordinater
   for (var y = 0; y < height; y++) {
     for (var x = 0; x < width; x++) {
       if (z == 0 || z == depth-1 || y == 0 || y == height-1 || x == 0 || x == width-1) {

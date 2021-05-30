@@ -29,6 +29,7 @@ body{
   width: 100%;
   height: auto;
   background: #1c2026;
+  overflow-x: hidden;
 }
 
 
@@ -458,8 +459,15 @@ canvas{
   background-color: rgba(255, 255, 255, 0.5);
   color: black;
 }
-.flip-card-front img {
-
+.bg-kub {
+  margin: auto;
+  width: 267px; height: 252px;
+  background: url('../img/css_sprites.png') -530px -10px;
+}
+.bg-WebpageImg {
+  margin: auto;
+  width: 500px; height: 261px;
+  background: url('../img/css_sprites.png') -10px -10px;
 }
 
 /* Style the back side */
