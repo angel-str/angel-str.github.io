@@ -493,7 +493,7 @@ footer{
   justify-content: flex-end;
 }
 #section3 form{
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
   display: flex;
   flex-direction: column;
   width: 50px;
