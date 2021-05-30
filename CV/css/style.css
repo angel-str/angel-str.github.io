@@ -178,7 +178,7 @@ header svg:hover{
   border-bottom: 2px solid rgba(185, 185, 185, 0.9);
   color: #7e2199;
   font-size: 5rem;
-  font-weight: 50;
+  font-weight: lighter;
 }
 #s1Left p{
   margin-top: 1rem;
@@ -221,7 +221,6 @@ header svg:hover{
   background: linear-gradient(rgba(0,0,0,0) 30%, rgba(255,255,255,0.7) 130%),
   linear-gradient(rgba(0,0,0,0) 50%, #d757f6 110%);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
 
   animation: shadowLight 4s 1;
@@ -467,6 +466,7 @@ canvas{
 .flip-card-back {
   background-color: #2d333d;
   color: white;
+  padding: 10%;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
