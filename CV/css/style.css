@@ -610,7 +610,7 @@ footer{
   #bgS2{
     display: none;
   }
-  #section2 img{
+  #section2 > img{
     display: none;
   }
   #window{
