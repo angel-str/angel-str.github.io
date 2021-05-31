@@ -66,7 +66,7 @@ function rightNav(){
 
 /*Slider 2*/
 var radioBtns = document.getElementsByClassName("radioBtn");
-var parOrder = document.getElementsByClassName("pOrder")
+var parOrder = document.getElementsByClassName("pOrder");
 radioBtns[0].addEventListener("click", slide0);
 radioBtns[1].addEventListener("click", slide1);
 radioBtns[2].addEventListener("click", slide2);
