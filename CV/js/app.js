@@ -14,9 +14,6 @@ jsShow_var[5].style.display = "inline";
 document.getElementById("window").style.overflow = "hidden";
 document.getElementById("slider").style.flexDirection = "row";
 
-//KOLLA MED DANILE OM UPPE -----------------------------------------------------
-
-
 /*NAV*/
 var hamBtn = document.getElementById("listSvg");
 var nav = document.getElementsByTagName("nav")[0];
@@ -73,7 +70,7 @@ radioBtns[2].addEventListener("click", slide2);
 parOrder[0].style.opacity = "100%";
 parOrder[1].style.opacity = "0%";
 parOrder[2].style.opacity = "0%";
-parOrder[0].classList.add("paragrafJS");
+parOrder[0].classList.add("paragrafJS");    //Lägger till klassen paragrafJS på klassen pOrder, detta ger p en absolut positionering
 parOrder[1].classList.add("paragrafJS");
 parOrder[2].classList.add("paragrafJS");
 
@@ -81,21 +78,21 @@ parOrder[2].classList.add("paragrafJS");
 function slide0(){
   document.getElementById("AndoridJones").style.transform = "translateX(0px)";
 
-  parOrder[0].style.opacity = "100%";
+  parOrder[0].style.opacity = "100%";//Första paragrafen sysn
   parOrder[1].style.opacity = "0%";
   parOrder[2].style.opacity = "0%";
 }
 function slide1(){
   document.getElementById("AndoridJones").style.transform = "translateX(-500px)";
   parOrder[0].style.opacity = "0%";
-  parOrder[1].style.opacity = "100%";
+  parOrder[1].style.opacity = "100%";//Andra paragrafen syns
   parOrder[2].style.opacity = "0%";
 }
 function slide2(){
   document.getElementById("AndoridJones").style.transform = "translateX(-1000px)";
   parOrder[0].style.opacity = "0%";
   parOrder[1].style.opacity = "0%";
-  parOrder[2].style.opacity = "100%";
+  parOrder[2].style.opacity = "100%";//Tredje paragrafen syns
 }
 
 /*KUB*/
@@ -112,13 +109,13 @@ const updFre = 10;
 
 const scaler = 1.8;
 
-var cube3D = [];
+var cube3D = []; //KUBENS STORLEK
 const depth = 6;
 const height = 6;
 const width = 6;
 const spacer = 10 * scaler;
 
-const right = calcRight();
+const right = calcRight(); //POSITIONERING
 const down = calcDown();
 const away = down;
 
@@ -126,7 +123,7 @@ const radie = 2 * scaler;
 const ballColor = "rgb(255,255,255)";
 const shadowColor = "cyan";
 
-const v = 0.5 * (Math.PI/180);
+const v = 0.5 * (Math.PI/180); //Vinkeln som den roterar per updatering
 const eyeDistance = 50;
 
 /*--------------UPDATE/ROTATE--------------*/
@@ -150,7 +147,7 @@ function calcDown(){
 for(var z = 0; z < depth; z++){           //Skapar en lista med kubens koordinater
   for (var y = 0; y < height; y++) {
     for (var x = 0; x < width; x++) {
-      if (z == 0 || z == depth-1 || y == 0 || y == height-1 || x == 0 || x == width-1) {
+      if (z == 0 || z == depth-1 || y == 0 || y == height-1 || x == 0 || x == width-1) { //If-satsen ser till att den är ihålig, ta bort om kuben ska vara fylld
         cube3D.push({
           x:x*spacer + right,
           y:y*spacer + down,
@@ -222,7 +219,7 @@ function getLowZ(){
 
 
 
-function rotateXY(){
+function rotateXY(){                //Gets the coordinates and rotates them along the XY plane
   cube3D.forEach((ball, cube3D) => {
     let x = ball.x - xPlane;
     let y = ball.y - yPlane;
@@ -231,7 +228,7 @@ function rotateXY(){
     ball.y = yPlane + x*Math.sin(v) + y*Math.cos(v);
   });
 }
-function rotateYZ(){
+function rotateYZ(){                //Gets the coordinates and rotates them along the YZ plane
   cube3D.forEach((ball, cube3D) => {
     let y = ball.y - yPlane;
     let z = ball.z - zPlane;
@@ -243,7 +240,7 @@ function rotateYZ(){
 
 
 
-function from3Dto2d(coord3d){
+function from3Dto2d(coord3d){   //Returns an array of X- and Y-coordinates that are the 2d projected resemblance of the 3d array
 
   let cube2D = [];
 
@@ -276,9 +273,9 @@ function paintAllBalls(){
 function paintBall(X,Y){
   ctx.beginPath();
   ctx.fillStyle = ballColor;
-  ctx.arc(X,Y,radie,0,2*Math.PI);
+  ctx.arc(X,Y,radie,0,2*Math.PI); //Paints a ball on the recived coordinates on the canvas
   ctx.shadowBlur = radie;
-  ctx.shadowColor = shadowColor;
+  ctx.shadowColor = shadowColor;  //Adds the glow effect
   ctx.fill();
 }
 
