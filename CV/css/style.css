@@ -634,6 +634,9 @@ footer{
   .flip-card-front{
     max-width: 100vw;
   }
+  .flip-card-back{
+    padding: 30%;
+  }
   nav{
     max-width: 100vw;
   }
