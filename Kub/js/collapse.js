@@ -10,10 +10,10 @@ const updFre = 20;
 const scaler = 1.7;
 
 var cube3D = [];
-const depth = 6;
-const height = 6;
-const width = 6;
-const spacer = 10 * scaler;
+const depth = 3;
+const height = 3;
+const width = 3;
+const spacer = 30 * scaler;
 
 const right = calcRight();
 const down = calcDown();
@@ -28,17 +28,17 @@ const shadowColorSide = "white";
 const shadowColorCorner = "black";
 
 var v = 0;
-var v_rateOfChange = -0.015;
+var v_rateOfChange = -0.04;
 const eyeDistance = 10000;
 
 
 /*NYA GREJER*/
 var staticCube = [];
 var sizeAngle = 0;
-var sizeAngle_rateOfChange = 0.04;
+var sizeAngle_rateOfChange = 0.02;
 var lengthVar;
-var expantionAmplitude = 0.3;
-var expandMinValue = 1;
+var expantionAmplitude = 0.9;
+var expandMinValue = .4;
 /*---------------*/
 
 /*--------------UPDATE--------------*/

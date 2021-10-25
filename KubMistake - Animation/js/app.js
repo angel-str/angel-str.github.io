@@ -17,58 +17,30 @@ const spacer = 10 * scaler;
 
 const right = calcRight();
 const down = calcDown();
-const away = 100;
-console.log(away);
+const away = down;
 
 const radie = 2 * scaler;
 const ballColor = "rgb(255,255,255)";
 const shadowColor = "cyan";
-const shadowColorSide = "white";
-//const shadowColorEdge = "black";
-const shadowColorCorner = "black";
 
-var v = 0;
-var v_rateOfChange = -0.015;
-const eyeDistance = 10000;
+var v = 0.8 * (Math.PI/180);
+const eyeDistance = 50;
 
 
-/*NYA GREJER*/
+/*NYA GREJER ASSÅ*/
 var staticCube = [];
-var sizeAngle = 0;
-var sizeAngle_rateOfChange = 0.04;
-var lengthVar;
-var expantionAmplitude = 0.3;
-var expandMinValue = 1;
+var sizeAngle = v;
+var lengthVar = 75*Math.sin(sizeAngle);
+lengthVar = 1;
 /*---------------*/
 
-/*--------------UPDATE--------------*/
+/*--------------UPDATE/ROTATE--------------*/
 function update(){
-  changeV();
-  resetStaticCube();
+  v+=.03;
   rotateXY();
   rotateYZ();
   paintAllBalls();
 }
-
-
-/*--------------Changes the angle--------------*/
-function changeV(){
-  v+=v_rateOfChange;
-  sizeAngle+=sizeAngle_rateOfChange;
-  lengthVar = expantionAmplitude*Math.sin(sizeAngle*2)+expandMinValue;
-}
-
-/*--------------Reset staticCube--------------*/
-function resetStaticCube() {
-  let counter = 0;
-  cube3D.forEach((ball, cube3D) => {
-    staticCube[counter].x = ball.x;
-    staticCube[counter].y = ball.y;
-    staticCube[counter].z = ball.z;
-    counter++;
-  });
-}
-
 
 /*--------------CALC POSITION--------------*/
 function calcRight(){
@@ -90,38 +62,11 @@ for(var z = 0; z < depth; z++){
         z:z*spacer + away
       });
       //NYA GREJER
-      if (z == 0 || z == depth-1 || y == 0 || y == height-1 || x == 0 || x == width-1) {
-        if (
-          (z == 0 && y == 0 && x == 0) ||
-          (z == depth -1 && y == 0 && x == 0) ||
-          (z == 0 && y == height-1 && x == 0) ||
-          (z == 0 && y == 0 && x == width-1) ||
-          (z == 0 && y == height-1 && x == width-1) ||
-          (z == depth-1 && y == height-1 && x == 0) ||
-          (z == depth -1 && y == 0 && x == width-1) ||
-          (z == depth -1 && y == height-1 && x == width-1)) {
-          staticCube.push({
-            x:x*spacer + right,
-            y:y*spacer + down,
-            z:z*spacer + away,
-            color: shadowColorCorner
-          });
-        }else{
-          staticCube.push({
-            x:x*spacer + right,
-            y:y*spacer + down,
-            z:z*spacer + away,
-            color: shadowColorSide
-          });
-        }
-      }else{
-        staticCube.push({
-          x:x*spacer + right,
-          y:y*spacer + down,
-          z:z*spacer + away,
-          color: shadowColor
-        });
-      }
+      staticCube.push({
+        x:x*spacer + right,
+        y:y*spacer + down,
+        z:z*spacer + away
+      });
     }
   }
 }
@@ -202,8 +147,8 @@ function rotateXY(){
 function rotateYZ(){
   let counter = 0;
   cube3D.forEach((ball, cube3D) => {
-    let y = staticCube[counter].y - yPlane;
-    let z = staticCube[counter].z - zPlane;
+    let y = ball.y - yPlane;
+    let z = ball.z - zPlane;
 
     staticCube[counter].y = yPlane + z*Math.sin(v)*lengthVar + y*Math.cos(v)*lengthVar;
     staticCube[counter].z = zPlane + z*Math.cos(v)*lengthVar - y*Math.sin(v)*lengthVar;
@@ -213,7 +158,7 @@ function rotateYZ(){
 }
 
 
-/*--------------transform--------------*/
+/*--------------Transposing--------------*/
 function from3Dto2d(coord3d){
 
   let cube2D = [];
@@ -225,10 +170,8 @@ function from3Dto2d(coord3d){
     let z = ball.z;
 
     cube2D.push({
-      x: xPlane + (x * eyeDistance)/(eyeDistance + z),    //*eyeDistance istället för z?
-      y: yPlane + (y * eyeDistance)/(eyeDistance + z),
-      z: z,
-      color: ball.color
+      x: xPlane + x/(eyeDistance + z) * z,
+      y: yPlane + y/(eyeDistance + z) * z
     });
   });
 
@@ -241,29 +184,17 @@ function from3Dto2d(coord3d){
 
 function paintAllBalls(){
   ctx.clearRect(0,0,w,h);
-
-  from3Dto2d(staticCube)
-
-  .sort(function(a, b) {
-    return b.z - a.z;
-  })
-
-  .forEach((ball, cube2D) => {
-    paintBall(ball.x,ball.y,ball.color);
+  from3Dto2d(staticCube).forEach((ball, cube2D) => {
+    paintBall(ball.x,ball.y);
   });
 }
 
-function paintBall(X,Y, color){
+function paintBall(X,Y){
   ctx.beginPath();
-  if(color == shadowColorCorner){
-    ctx.fillStyle = color;
-  }
-  else {
-    ctx.fillStyle = ballColor;
-  }
+  ctx.fillStyle = ballColor;
   ctx.arc(X,Y,radie,0,2*Math.PI);
   ctx.shadowBlur = radie;
-  ctx.shadowColor = color;
+  ctx.shadowColor = shadowColor;
   ctx.fill();
 }
 

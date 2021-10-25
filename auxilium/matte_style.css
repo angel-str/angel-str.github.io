@@ -1,0 +1,246 @@
+:root{
+  --body_bg_color: #181d26;
+  --header_bg_color: #323D54;
+  --q_bg_color: #1A202C;
+  --link_color: #23E8FA;
+  --shadow: 0px 0px 20px 2px black;
+  --text_color: #E3E3E3;
+}
+
+*, *::after, *::before{
+  color: var(--text_color);
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p{
+  padding: 15px;
+}
+a{
+  text-decoration: none;
+  color: var(--link_color);
+}
+a:hover{
+  text-decoration: underline;
+}
+h1{
+  padding: 20px;
+}
+h2{
+  font-size: 1.3rem;
+  font-weight: 200;
+  padding: 20px;
+  color: #1E90FF;
+}
+h3{
+  display:inline;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 15px;
+}
+body{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--body_bg_color);
+  overflow: hidden;
+}
+.wrapper{
+  display: flex;
+}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: rgba(30, 144, 255, 0.3);
+}
+::-webkit-scrollbar-track{
+  background: linear-gradient(#5e6982 0%, #323D54 50%, #5e6982 100%);
+  background: var(--header_bg_color);
+}
+
+
+
+/* HEADER */
+header{
+  position: fixed;
+  height: 75px;
+  width: 100%;
+  background-color: var(--header_bg_color);
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  z-index: 2;
+}
+header > a img{
+  height: 50px;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 20%;
+}
+header ul{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  list-style: none;
+}
+header ul a{
+  position: relative;
+  color: var(--text_color);
+  text-decoration: none;
+}
+header ul a:hover{
+  text-decoration: none;
+}
+header ul li a::before{
+  content: "";
+  position: absolute;
+  background-color: var(--text_color);
+  height: .07rem;
+  width: 0;
+  left: 50%;
+  bottom: 0px;
+  transition: .3s;
+}
+header ul li a:hover::before{
+  width: 100%;
+  left: 0;
+}
+#icon{
+  border-radius: 50%;
+  height: 55px;
+  box-shadow: 0 0 5px 1px #000;
+  transition: .3s;
+}
+
+
+/* WRAPPER */
+#fixedWrapper{
+  position: fixed;
+}
+
+
+/* MAIN */
+main{
+  position: static;
+  padding-top: 75px;
+  height: 100vh;
+  width: 90%;
+  padding-left: 50px;
+  overflow-y: scroll;
+}
+main h1{
+  text-align: center;
+}
+.question{
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  border-top: 1px solid var(--text_color);
+}
+.question span{
+  position: absolute;
+  right: 5%;
+  font-size: .9rem;
+  font-style: italic;
+}
+.question div{
+  display: inline;
+  padding: 10px;
+  background-color: #fff4;
+  border-radius: 2em;
+  transition: .3s;
+}
+.question div:hover{
+  color: #1E90FF;
+  background-color: #fff2;
+}
+
+
+/* ASIDE */
+aside{
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 10%;
+  height: calc(100%);
+  text-align: center;
+  border-left: 1px solid var(--text_color);
+}
+#aside_btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 37.5px));
+  height: 25px;
+  width: auto;
+  transition: .3s;
+}
+#aside_btn:hover{
+  cursor: pointer;
+  fill: var(--link_color);
+}
+
+aside h2{
+  margin-top: 95px;
+}
+::placeholder{
+  color: var(--text_color);
+}
+
+
+#slide{
+  position: absolute;
+  top: 75px;
+  height: calc(100% - 75px);
+  width: 100%;
+  background-color: var(--body_bg_color);
+  left:100%;
+  transition: .5s;
+  text-align: center;
+}
+#slide > div{
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+#slide button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#slide .svg_icon{
+  width: 20px;
+  height: auto;
+  margin: 20px;
+  transition: .5s;
+}
+#slide .svg_icon:hover{
+  cursor: pointer;
+  fill: var(--link_color);
+}
+#slide input{
+  text-align: center;
+  background-color: var(--q_bg_color);
+  border: 1px solid var(--text_color);
+  width: 40%;
+  font-size: 1rem;
+  margin: 5px;
+  padding: 15px;
+}
+#slide textarea{
+  resize: none;
+  background-color: transparent;
+}

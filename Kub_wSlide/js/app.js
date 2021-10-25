@@ -41,34 +41,15 @@ var expantionAmplitude = 0.3;
 var expandMinValue = 1;
 /*---------------*/
 
-/*--------------UPDATE--------------*/
+/*--------------UPDATE/ROTATE--------------*/
 function update(){
-  changeV();
-  resetStaticCube();
+  v+=v_rateOfChange;
+  sizeAngle+=sizeAngle_rateOfChange;
+  lengthVar = expantionAmplitude*Math.sin(sizeAngle*2)+expandMinValue;
   rotateXY();
   rotateYZ();
   paintAllBalls();
 }
-
-
-/*--------------Changes the angle--------------*/
-function changeV(){
-  v+=v_rateOfChange;
-  sizeAngle+=sizeAngle_rateOfChange;
-  lengthVar = expantionAmplitude*Math.sin(sizeAngle*2)+expandMinValue;
-}
-
-/*--------------Reset staticCube--------------*/
-function resetStaticCube() {
-  let counter = 0;
-  cube3D.forEach((ball, cube3D) => {
-    staticCube[counter].x = ball.x;
-    staticCube[counter].y = ball.y;
-    staticCube[counter].z = ball.z;
-    counter++;
-  });
-}
-
 
 /*--------------CALC POSITION--------------*/
 function calcRight(){
@@ -203,7 +184,7 @@ function rotateYZ(){
   let counter = 0;
   cube3D.forEach((ball, cube3D) => {
     let y = staticCube[counter].y - yPlane;
-    let z = staticCube[counter].z - zPlane;
+    let z = ball.z - zPlane;
 
     staticCube[counter].y = yPlane + z*Math.sin(v)*lengthVar + y*Math.cos(v)*lengthVar;
     staticCube[counter].z = zPlane + z*Math.cos(v)*lengthVar - y*Math.sin(v)*lengthVar;
